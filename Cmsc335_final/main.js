@@ -60,7 +60,7 @@ app.post("/ordersubmitted", async (req,res) => {
         result += "Gender: " + gender +  "<br>"
         result += "Probability: " + probability * 100 + "%" + "<br>"
         result += "<a class='home' href='/index.ejs'>Home</a>";
-        res.send(result);
+        res.render("orderprocessed", {div: result})
     } catch (e) {
         console.error(e);
     } finally {
