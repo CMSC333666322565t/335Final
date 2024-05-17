@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path'); 
 require("dotenv").config({ path: path.resolve(__dirname, '.env') });
-const port_number = process.env.PORT || 5000;
+const port_number = 5000;
 const uri = process.env.MONGO_CONNECTION_STRING;
 
 const databaseAndCollection = {db: "Bakery", collection:"orders"};
